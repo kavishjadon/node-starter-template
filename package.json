@@ -1,0 +1,28 @@
+{
+  "name": "backend-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "development": "pm2 start process.json --env development --watch",
+    "staging": "pm2 start process.json --env staging --watch",
+    "production": "pm2 start process.json --env production",
+    "stop": "pm2 stop process.json",
+    "reload": "pm2 reload process.json",
+    "logs": "tail -f logs/app_logs | ./node_modules/.bin/bunyan -o short"
+  },
+  "author": "Kavish Jadon",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "pm2": "^5.1.2"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.15",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1"
+  }
+}

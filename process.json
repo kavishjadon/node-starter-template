@@ -1,0 +1,15 @@
+{
+  "script": "./src/server.js",
+  "ignore_watch": ["node_modules", "logs"],
+  "env_development": {
+    "NODE_ENV": "development"
+  },
+  "env_staging": {
+    "NODE_ENV": "staging"
+  },
+  "env_production": {
+    "NODE_ENV": "production"
+  },
+  "error_file": "./logs/app_logs",
+  "name": "backend-node"
+}
