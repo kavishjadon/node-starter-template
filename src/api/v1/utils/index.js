@@ -1,8 +1,4 @@
+const helpers = require('./helpers');
 const errors = require('./errors');
 
-const snakeToPascal = (string) => string
-  .toLowerCase()
-  .split('_')
-  .map((el) => el.charAt(0).toUpperCase() + el.slice(1)).join('');
-
-module.exports = { snakeToPascal, errors };
+module.exports = { errors, ...helpers };

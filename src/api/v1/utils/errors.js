@@ -1,9 +1,10 @@
-const { snakeToPascal } = require('./index');
+const { snakeToPascal } = require('./helpers');
 
 const errorTypes = [
-  ['VALIDATION_ERROR', '400', 'Validation for data provided failed'],
-  ['DUPLICATE_ENTRY', '400', 'One of the fields provided is already taken'],
-  ['UNAUTHORIZED', '401', 'You are not authorized to access this resource'],
+  ['VALIDATION_ERROR', 400, 'Validation for data provided failed'],
+  ['DUPLICATE_ENTRY', 400, 'One of the fields provided is already taken'],
+  ['UNAUTHORIZED', 401, 'You are not authorized to access this resource'],
+  ['BAD_INPUT_ERROR', 400, 'Data provided is incorrect'],
 ];
 
 const errors = {};

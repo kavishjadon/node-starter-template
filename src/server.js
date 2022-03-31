@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { port } = require('./config');
+const { port, logger } = require('./config');
 const routesV1 = require('./api/v1/routes');
 
 const app = express();
@@ -25,4 +25,4 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.listen(port);
+app.listen(port, () => logger.info('server started on port 4000'));
